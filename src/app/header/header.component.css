@@ -1,0 +1,29 @@
+.container{
+    width: 60vw;
+    height: 40vh;
+    background-color: rgb(90, 122, 112);
+    margin: auto;
+    border-radius: 1.7rem;
+}
+.inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container h1{
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 600;
+    padding-left: 1.7rem;
+}
+
+.container img{
+    width: 10rem;
+    height: auto;
+}
+.container p{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
