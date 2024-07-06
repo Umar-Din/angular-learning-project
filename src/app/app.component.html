@@ -1,2 +1,9 @@
 <app-header></app-header>
-<app-user></app-user>
+<ul class="lists">
+    <li>
+        <app-user [avator]="users[0].avatar" [name]="users[0].name"></app-user>
+    </li>
+    <li>
+        <app-user [avator]="users[1].avatar" [name]="users[1].name"></app-user>
+    </li>
+</ul>
