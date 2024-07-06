@@ -1,15 +1,23 @@
 <app-header></app-header>
 <div class="container">
 <ul class="lists">
-    @for(eachUser of users;track eachUser.id){
+    <li *ngFor="let user of users">
+        <app-user [user]="user" (selected)="selectedUser($event)"></app-user>
+    </li>
+    <!-- @for(eachUser of users;track eachUser.id){
         <li>
             <app-user [user]="eachUser" (selected)="selectedUser($event)"></app-user>
         </li>
-    }
+    } -->
 </ul>
-@if(user){
-    <app-exercise1 [user]="user"></app-exercise1>
-}@else {
-    <p>Please select the user to see the user Tasks</p>
-}
+    <app-exercise1 *ngIf="user;else fallback" [user]="user"></app-exercise1>
+    <ng-template #fallback>
+        <p>Please select the user to see the user Tasks</p>
+    </ng-template>
+
+    <!-- @if(user){
+        <app-exercise1 [user]="user"></app-exercise1>
+    }@else {
+        <p>Please select the user to see the user Tasks</p>
+    } -->
 </div>

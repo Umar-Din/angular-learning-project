@@ -4,11 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { User, UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
 import { Exercise1Component } from './exercise1/exercise1.component';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,UserComponent,Exercise1Component],
+  imports: [RouterOutlet,HeaderComponent,UserComponent,Exercise1Component,NgFor,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
