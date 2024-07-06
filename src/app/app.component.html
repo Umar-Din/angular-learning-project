@@ -1,4 +1,5 @@
 <app-header></app-header>
+<div class="container">
 <ul class="lists">
     <li>
         <app-user [avator]="users[0].avatar" [name]="users[0].name" (selected)="selectedUser($event)"></app-user>
@@ -7,5 +8,5 @@
         <app-user [avator]="users[1].avatar" [name]="users[1].name" (selected)="selectedUser($event)"></app-user>
     </li>
 </ul>
-
-<p>{{username}}</p>
+<app-exercise1 [name]="userName"></app-exercise1>
+</div>

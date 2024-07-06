@@ -1,0 +1,13 @@
+.exercise{
+    width: 60rem;
+    height: 3.5rem;
+    background-color: rgb(180, 189, 180);
+    border-radius: 1rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exercise p{
+    font-size: 1.7rem;
+}

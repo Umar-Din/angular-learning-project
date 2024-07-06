@@ -21,12 +21,4 @@ export class UserComponent {
     this.selected.emit(this.name);
   }
 
-  /*
-  
-  ----------------output function---------------------
-
-  name = output<string>()
-  
-  */
-  
 }
