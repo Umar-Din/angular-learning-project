@@ -14,4 +14,9 @@ import { DUMMY_USERS } from './dummy-users';
 export class AppComponent {
   title = 'angularP1';
   users = DUMMY_USERS
+
+  username = ''
+  selectedUser(username: string) {
+    this.username = username
+  }
 }

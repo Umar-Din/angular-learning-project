@@ -1,4 +1,4 @@
-import { Component,Input,computed,input } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,28 +8,25 @@ import { Component,Input,computed,input } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  // @Input({required:true}) avator!:string;  //! respresentes that this variable will get value 
-  // @Input({required:true}) name!:string;
+  @Input({required:true}) avator!:string;  //! respresentes that this variable will get value 
+  @Input({required:true}) name!:string;
 
+  @Output() selected = new EventEmitter();
 
-  // get imagePath(){
-  //   return `assets/users/${this.avator}`;
-  // }
+  get imagePath(){
+    return `assets/users/${this.avator}`;
+  }
 
-  // onSelectUser(){
+  onSelectUser(){
+    this.selected.emit(this.name);
+  }
 
-  // }
+  /*
+  
+  ----------------output function---------------------
 
-
-  // #====================== using singals ======================
-
-  avator = input.required<string>();//when required canot pass default value to input(')
-  name = input.required<string>();
-
-  imagePath = computed(() => {
-    return `assets/users/${this.avator()}`;
-  })
-
-  onSelectUser(){}
+  name = output<string>()
+  
+  */
   
 }
