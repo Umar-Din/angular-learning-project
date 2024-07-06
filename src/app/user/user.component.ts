@@ -1,5 +1,17 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
 
+
+// type User = {
+//   id:string;
+//   name: string;
+//   avator:string;
+// }
+
+export interface User {
+  id: string;
+  name: string;
+  avatar: string;
+}
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -8,17 +20,15 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  @Input({required:true}) avator!:string;  //! respresentes that this variable will get value 
-  @Input({required:true}) name!:string;
-
+  @Input({required:true}) user!:User;  
   @Output() selected = new EventEmitter();
 
   get imagePath(){
-    return `assets/users/${this.avator}`;
+    return `assets/users/${this.user.avatar}`;
   }
 
   onSelectUser(){
-    this.selected.emit(this.name);
+    this.selected.emit(this.user);
   }
 
 }

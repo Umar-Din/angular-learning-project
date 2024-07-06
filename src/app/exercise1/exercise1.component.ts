@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { User } from '../user/user.component';
 @Component({
   selector: 'app-exercise1',
   standalone: true,
@@ -8,9 +8,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './exercise1.component.css'
 })
 export class Exercise1Component {
-  @Input({required:true}) name!:string;
+  @Input({required:true}) user!:User;
 
-  get selectedUserName(){
-    return this.name;
+  get selectedUser(){
+    return this.user;
   }
 }

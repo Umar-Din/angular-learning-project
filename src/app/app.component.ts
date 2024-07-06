@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
+import { User, UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
 import { Exercise1Component } from './exercise1/exercise1.component';
 
@@ -15,9 +15,8 @@ import { Exercise1Component } from './exercise1/exercise1.component';
 export class AppComponent {
   title = 'angularP1';
   users = DUMMY_USERS;
-  userName:string = '';
-  selectedUser(username:string){
-    this.userName = username
-    
+  user:User|undefined;
+  selectedUser(user:User){
+    this.user = user;
   }
 }
